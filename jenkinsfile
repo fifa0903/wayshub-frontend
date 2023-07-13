@@ -50,7 +50,7 @@ pipeline{
                 sshagent([cred]){
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
                     cd ${directory}
-		    docker tag fama-frontend:latest nobody1305/fama-frontend:latest
+		    docker tag fama-frontend:latest ${image}
                     docker push ${image}
                     exit
                     EOF"""
