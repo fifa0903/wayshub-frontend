@@ -2,7 +2,7 @@ def branch = "main"
 def remote = "origin"
 def directory = "~/wayshub-frontend"
 def server = "fama@103.191.92.211"
-def cre = "wayshub"
+def cred = "wayshub1"
 def image = "nobody1305/fama-frontend:latest"
 
 pipeline{
