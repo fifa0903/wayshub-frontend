@@ -2,7 +2,7 @@ def branch = "main"
 def remote = "origin"
 def directory = "~/wayshub-frontend"
 def server = "fama@103.191.92.211"
-def cred = "wayshub1"
+def cred = "wayshub2"
 def image = "nobody1305/fama-frontend:latest"
 
 pipeline{
@@ -12,6 +12,7 @@ pipeline{
             steps{
                 sshagent([cred]){
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
+		    docker compose down
                     cd ${directory}
                     git pull ${remote} ${branch}
                     exit
