@@ -5,6 +5,7 @@ def server = "fama@103.191.92.211"
 def cred = "wayshub1"
 def image = "nobody1305/fama-frontend:latest"
 
+
 pipeline{
     agent any
     stages{
